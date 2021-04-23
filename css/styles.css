@@ -1,0 +1,372 @@
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+    --orange-color: #e8bc74;
+}
+
+/* General*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f5f4;
+    font-family: Garamond, serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+ul li {
+    list-style: none;
+}
+
+.bg-img {
+    z-index: -1;
+    position: absolute;
+    max-width: 70%;
+    opacity: 0.1;
+}
+
+/*Header*/
+
+nav a {
+    color: white;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 22px;
+}
+
+.showcase a {
+    text-decoration: none;
+}
+
+.showcase a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #6b765c;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.header .links {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.showcase {
+    background-image: url('/assets/fp-img-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+    height: 70%;
+    margin-bottom: 180px;
+}
+
+.showcase .showcase-overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    text-align: center;
+    color: #fff;
+}
+
+.showcase .showcase-overlay h1 {
+    font-size: 60px;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+}
+
+.showcase .showcase-overlay p {
+    font-size: 26px;
+    letter-spacing: 5px;
+}
+
+/*Services*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 5% 45%;
+    grid-template-rows: minmax(130px, 10px);
+    gap: 2px 2px;
+    grid-template-areas: "fp-img-1 front-title-text front-title-text" "fp-img-1 . fp-text-1" "fp-img-1 . fp-img-2" "fp-img-3 . fp-img-2";
+}
+
+.fp-img-1 {
+    grid-area: fp-img-1;
+    margin: 0px 40px 0px 90px;
+}
+
+.front-title-text {
+    background-color: white;
+    grid-area: front-title-text;
+    padding: 30px 30px;
+}
+
+.fp-text-1 {
+    grid-area: fp-text-1;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.fp-text-1 div {
+    margin: 10px 0px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.fp-img-2 {
+    grid-area: fp-img-2;
+    margin: 0px 25px 0px 60px;
+}
+
+.fp-img-3 {
+    grid-area: fp-img-3;
+    margin: 40px 0px;
+}
+
+.grid-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.small-flower {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.3;
+    width: 10%;
+}
+
+.small-flower img {
+    width: 100%;
+    margin: 30px;
+}
+
+/*About me*/
+
+.about-me {
+    background-color: white;
+    height: 70%;
+    margin-bottom: 100px;
+}
+
+.about-me .about-me-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 600px;
+    text-align: center;
+    color: darkslategrey;
+    width: 40%;
+}
+
+.about-me h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-me p {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.contact-me-btn, .read-more-btn, .other-btn {
+    font-family: Garamond, serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    height: 46px;
+    width: 200px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.contact-me-btn {
+    background-color: #889474;
+}
+
+.contact-me-btn:hover {
+    background-color: #777864;
+}
+
+.contact-me-btn:active {
+    background-color: #69745a;
+}
+
+.read-more-btn, .other-btn {
+    background-color: var(--orange-color);
+    ;
+}
+
+.read-more-btn:hover, .other-btn:hover {
+    background-color: #Ebc378;
+}
+
+.read-more-btn:active, .other-btn:active {
+    background-color: #Dcaf64;
+}
+
+.about-me-icons i {
+    margin: 10px 8px;
+    opacity: 0.6;
+}
+
+.fab {
+    font-size: 30px;
+}
+
+/*Portfolio*/
+
+.portfolio-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    color: darkslategrey;
+    width: 40%;
+}
+
+.portfolio-info h1 {
+    font-size: 36px;
+}
+
+.portfolio-info p {
+    margin-bottom: 64px;
+    font-size: 18px;
+}
+
+.portf-pics {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.portf-pics-group1 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portf-pic-1, .portf-pic-2 {
+    width: 50%;
+    padding: 5px;
+}
+
+.img-small-square {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.img-big-square {
+    width: 600px;
+    height: 610px;
+    object-fit: cover;
+}
+
+.img-horizontal-rectangle {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+div .portf-pics img {
+    width: 100%;
+}
+
+.end-other-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width:960px) {
+    .container {
+        padding: 0;
+        margin: 20px;
+    }
+    .grid-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto 1fr 0.1fr;
+        grid-template-areas: "front-title-text" "fp-img-1" "fp-text-1" "fp-img-2" "fp-img-3";
+    }
+    .front-title-text {
+        margin-bottom: 6px;
+        font-size: 16px;
+        padding: 10px;
+        text-align: center;
+    }
+    .fp-img-1, .fp-img-2 {
+        margin: 0px;
+    }
+    .showcase {
+        margin-bottom: 30px;
+    }
+    div .small-flower {
+        width: 50%;
+    }
+    div.small-flower img {
+        margin: 0px;
+    }
+    section.about-me div.about-me-overlay {
+        width: 96%;
+    }
+    section.about-me {
+        margin-bottom: 40px;
+    }
+    div.portfolio-info {
+        width: 96%;
+    }
+    div.portfolio-info p {
+        margin: 30px;
+    }
+    .portf-pics {
+        width: 96%;
+        flex-direction: column;
+    }
+    div.portf-pic-1, div.portf-pics-group1 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1360px) {
+    section.about-me .about-me-overlay {
+        width: 75%;
+    }
+}
